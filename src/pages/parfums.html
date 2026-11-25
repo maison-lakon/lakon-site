@@ -1,0 +1,39 @@
+<!--
+title: Les parfums
+description: Les créations {{brand}} : sept univers, de Silence à Honneur. Familles olfactives, notes et disponibilité.
+-->
+<section class="section section--tight" aria-labelledby="parfums-title">
+  <div class="wrap">
+    <ol class="crumbs" role="list"><li><a href="/">Accueil</a></li><li aria-current="page">Parfums</li></ol>
+    <div class="head" style="margin-top:2rem">
+      <div>
+        <p class="eyebrow">La collection</p>
+        <h1 id="parfums-title" class="display-l words">Les parfums</h1>
+        <p class="lead">Sept créations en développement. Elles seront mises en vente lorsqu’elles seront fabriquées et conformes ; d’ici là, vous pouvez demander à être prévenu.</p>
+      </div>
+      <p class="small" role="status" data-results-count></p>
+    </div>
+
+    <div class="toolbar">
+      <div class="chips" role="group" aria-label="Familles olfactives">
+        <button type="button" class="chip" data-filter-family="all" aria-pressed="true">Toutes</button>
+        <!-- @family-options -->
+      </div>
+      <div class="chips" role="group" aria-label="Genre">
+        <button type="button" class="chip" data-filter-gender="all" aria-pressed="true">Tous</button>
+        <button type="button" class="chip" data-filter-gender="masculin" aria-pressed="false">Masculin</button>
+        <button type="button" class="chip" data-filter-gender="mixte" aria-pressed="false">Mixte</button>
+      </div>
+      <label class="small">Trier
+        <select class="select" data-sort>
+          <option value="maison">Ordre de la maison</option>
+          <option value="intensite-asc">Intensité croissante</option>
+          <option value="intensite-desc">Intensité décroissante</option>
+        </select>
+      </label>
+    </div>
+
+    <!-- @products-grid:all -->
+    <p class="lead center" style="text-align:center;margin-top:3rem" data-empty hidden>Aucune création ne correspond à ces critères pour l’instant.</p>
+  </div>
+</section>

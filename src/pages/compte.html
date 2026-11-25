@@ -1,0 +1,30 @@
+<!--
+title: Mon espace
+description: Votre passeport olfactif, vos favoris et votre collection {{brand}}.
+-->
+<section class="section section--tight" aria-labelledby="collection-title">
+  <div class="wrap stack-l">
+    <div class="stack">
+      <p class="eyebrow">Mon espace</p>
+      <h1 id="collection-title" class="display-l">Ma collection</h1>
+      <p class="notice">Votre passeport et vos favoris sont gardés sur cet appareil uniquement. Les comptes clients sécurisés (commandes, adresses, certificats) seront ouverts avec la boutique.</p>
+    </div>
+
+    <section id="passeport" class="stack" aria-labelledby="pass-title">
+      <h2 id="pass-title" class="display-m">Passeport olfactif</h2>
+      <div data-passport-view></div>
+    </section>
+
+    <section id="favoris" class="stack" aria-labelledby="fav-title">
+      <h2 id="fav-title" class="display-m">Favoris</h2>
+      <ul class="grid-products" role="list" data-fav-list></ul>
+      <p class="small" data-fav-empty>Aucun favori pour l’instant. Le cœur, sur chaque création, l’ajoute ici.</p>
+    </section>
+
+    <section class="stack" aria-labelledby="data-title">
+      <h2 id="data-title" class="display-s">Vos données</h2>
+      <p class="small">Rien n’est envoyé à nos serveurs depuis cet espace. Vous pouvez tout effacer de cet appareil.</p>
+      <div><button class="btn" type="button" data-clear-local>Effacer mes données locales</button></div>
+    </section>
+  </div>
+</section>

@@ -1,0 +1,23 @@
+<!--
+title: Diagnostic olfactif
+description: Huit questions pour construire votre profil olfactif {{brand}} ID et découvrir les créations qui vous ressemblent.
+-->
+<section class="section section--tight" aria-labelledby="diag-title">
+  <div class="wrap stack-l">
+    <div class="stack center" style="text-align:center">
+      <p class="eyebrow">Diagnostic olfactif · {{brand}} ID</p>
+      <h1 id="diag-title" class="display-l words">Votre parfum ne devrait ressembler qu’à vous.</h1>
+      <p class="lead" style="margin-inline:auto">Huit questions, environ deux minutes. Vos réponses restent sur cet appareil.</p>
+    </div>
+    <form class="quiz" data-quiz>
+      <div class="quiz__progress" aria-hidden="true"><span></span></div>
+      <p class="small" data-quiz-count aria-live="polite"></p>
+      <div data-quiz-steps></div>
+      <div class="quiz__nav">
+        <button class="btn" type="button" data-quiz-prev>Précédent</button>
+        <button class="btn btn--solid" type="button" data-quiz-next>Suivant</button>
+      </div>
+    </form>
+    <div class="profile" data-quiz-result hidden></div>
+  </div>
+</section>

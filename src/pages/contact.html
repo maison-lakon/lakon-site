@@ -1,0 +1,23 @@
+<!--
+title: Contact
+description: Écrire à la maison {{brand}}.
+-->
+<section class="section section--tight">
+  <div class="wrap stack-l">
+    <ol class="crumbs" role="list"><li><a href="/">Accueil</a></li><li aria-current="page">Contact</li></ol>
+    <div class="stack"><p class="eyebrow">Contact</p><h1 class="display-l words">Nous écrire.</h1></div>
+    <div class="prose">
+
+      <p>Une question sur une création, un cadeau, un projet professionnel : écrivez-nous, nous répondons personnellement.</p>
+      <form class="form" data-mail-form="contact">
+        <div class="form-row">
+          <div class="field"><label for="ct-name">Nom</label><input id="ct-name" name="nom" required autocomplete="name"></div>
+          <div class="field"><label for="ct-email">E-mail</label><input id="ct-email" type="email" name="email" required autocomplete="email"></div>
+        </div>
+        <div class="field"><label for="ct-msg">Message</label><textarea id="ct-msg" name="message" required maxlength="2000"></textarea></div>
+        <div><button class="btn btn--solid" type="submit">Envoyer</button></div>
+        <p class="form-status" role="status" data-form-status="contact"></p>
+      </form>
+    </div>
+  </div>
+</section>

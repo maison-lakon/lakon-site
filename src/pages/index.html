@@ -1,0 +1,188 @@
+<!--
+title:
+description: {{brand}}, maison de parfumerie. {{signature}} Des créations pour ceux dont la présence se remarque sans qu’ils aient besoin de parler.
+-->
+<!-- 1 · Ouverture : le film occupe l'écran, puis glisse à gauche en continuant de jouer ; les iconiques arrivent à droite. -->
+<section class="stage" data-stage aria-labelledby="hero-title">
+  <div class="stage__sticky">
+    <div class="stage__media">
+      <!-- @media:hero -->
+      <div class="stage__veil" aria-hidden="true"></div>
+      <div class="stage__intro">
+        <p class="eyebrow stage__brand">{{brand}}</p>
+        <h1 id="hero-title" class="display-xl">La force du silence.</h1>
+        <p class="stage__tagline">{{tagline}}</p>
+        <div class="actions" style="justify-content:center">
+          <a class="btn btn--light" href="/parfums">Découvrir la collection</a>
+          <a class="btn btn--ghost-light" href="/diagnostic">Trouver ma signature olfactive</a>
+        </div>
+      </div>
+      <div class="media-controls">
+        <button class="media-btn" type="button" data-media-toggle aria-pressed="false" aria-label="Mettre en pause">
+          <svg viewBox="0 0 24 24" aria-hidden="true" class="i-pause"><path d="M8 5v14M16 5v14"/></svg><svg viewBox="0 0 24 24" aria-hidden="true" class="i-play"><path d="M7 5l12 7-12 7z"/></svg>
+        </button>
+        <span class="media-caption" data-media-caption>Scène conceptuelle · votre film ici</span>
+      </div>
+    </div>
+    <aside class="stage__side" aria-labelledby="iconics-title">
+      <p class="eyebrow">La sélection</p>
+      <h2 id="iconics-title" class="display-m">Les iconiques</h2>
+      <!-- @iconics -->
+      <a class="link" href="/parfums">Toute la collection</a>
+    </aside>
+  </div>
+</section>
+
+<!-- 2 · Manifeste -->
+<section class="section manifesto-block" aria-labelledby="manifeste-title">
+  <div class="wrap stack-l center" style="text-align:center">
+    <p class="eyebrow">Manifeste</p>
+    <h2 id="manifeste-title" class="manifesto words" style="margin-inline:auto">Le parfum ne précède pas l’homme. Il prolonge sa <em>présence</em>.</h2>
+    <p class="lead reveal" style="margin-inline:auto">Une empreinte invisible, une expression du caractère, une signature qui demeure.</p>
+  </div>
+</section>
+
+<!-- 3 · La boutique à gauche, le second film à droite, qui reste en place pendant le défilement. -->
+<section class="split-media" aria-labelledby="shop-title">
+  <div class="split-media__content">
+    <div class="stack" style="margin-bottom:2.5rem">
+      <p class="eyebrow">La boutique</p>
+      <h2 id="shop-title" class="display-l words">Sept créations.</h2>
+      <p class="lead">En développement : prix et disponibilité seront communiqués au lancement, jamais avant.</p>
+    </div>
+    <!-- @products-grid:shop -->
+    <div class="actions" style="margin-top:2.5rem"><a class="btn btn--solid" href="/parfums">Voir tous les parfums</a></div>
+  </div>
+  <div class="split-media__media">
+    <div class="split-media__frame">
+      <!-- @media:second -->
+      <p class="split-media__caption">Héritage · Ce que l’on reçoit, on le porte.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 4 · Les sept univers -->
+<section class="section" aria-labelledby="univers-title">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <p class="eyebrow">Les sept univers · en création</p>
+        <h2 id="univers-title" class="display-l words">Sept valeurs. Sept sillages.</h2>
+      </div>
+      <p class="small" style="max-width:24rem">Une base créative : chaque univers a sa couleur, ses matières et son histoire.</p>
+    </div>
+  </div>
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <div class="marquee__group"><span>Silence</span><span>Discipline</span><span>Héritage</span><span>Souverain</span><span>Vertu</span><span>Immortel</span><span>Honneur</span></div>
+      <div class="marquee__group"><span>Silence</span><span>Discipline</span><span>Héritage</span><span>Souverain</span><span>Vertu</span><span>Immortel</span><span>Honneur</span></div>
+    </div>
+  </div>
+  <div class="wrap" style="margin-top:clamp(2.5rem,5vw,4rem)">
+    <!-- @universes -->
+  </div>
+</section>
+
+<!-- 5 · Image qui se dézoome lentement pendant le défilement. -->
+<section class="zoomout" data-zoomout aria-labelledby="zoom-title">
+  <div class="zoomout__sticky">
+    <div class="zoomout__media"><!-- @media:zoom --></div>
+    <div class="zoomout__text">
+      <p class="eyebrow">La collection</p>
+      <h2 id="zoom-title" class="display-l">Une maison, sept caractères.</h2>
+      <a class="link" href="/parfums">Découvrir</a>
+    </div>
+    <p class="zoomout__caption">Visuel conceptuel</p>
+  </div>
+</section>
+
+<!-- 6 · Diagnostic olfactif -->
+<section class="section section--alt" aria-labelledby="diag-title">
+  <div class="wrap split">
+    <div class="stack-l">
+      <p class="eyebrow">Diagnostic olfactif</p>
+      <h2 id="diag-title" class="display-l words">Votre parfum ne devrait ressembler qu’à vous.</h2>
+      <p class="lead reveal">Huit questions sur vos matières, vos occasions et la présence que vous souhaitez. À la fin, un profil olfactif et les créations qui vous correspondent, chacune expliquée.</p>
+      <div class="actions reveal">
+        <a class="btn btn--solid" href="/diagnostic">Découvrir mon profil olfactif</a>
+        <button class="btn" type="button" data-concierge-open>Parler au concierge</button>
+      </div>
+    </div>
+    <div class="profile__id unfold" aria-hidden="true">
+      <p class="eyebrow">Passeport olfactif · {{brand}} ID</p>
+      <p class="display-m">Héritage</p>
+      <p class="italic" style="font-family:var(--serif);color:var(--fg-soft)">Ce que l’on reçoit, on le porte.</p>
+      <hr class="rule" style="margin-block:1rem">
+      <p class="caps" style="color:var(--fg-soft)">Cuir · Boisé · Présence affirmée</p>
+    </div>
+  </div>
+</section>
+
+<!-- 7 · Collector -->
+<section class="collector-block theme-dark" aria-labelledby="collector-title">
+  <div class="collector-block__media"><!-- @media:collector --></div>
+  <div class="wrap collector-block__text">
+    <p class="eyebrow">Collector · {{brand}} Archives</p>
+    <h2 id="collector-title" class="vault__title words" style="margin-inline:0;text-align:left">Certaines créations ne reviennent jamais.</h2>
+    <p class="lead reveal">Les éditions limitées seront présentées ici uniquement lorsqu’elles existeront, chacune avec son tirage réel.</p>
+    <div class="actions reveal"><a class="btn btn--solid" href="/collector">Entrer dans les archives</a></div>
+  </div>
+</section>
+
+<!-- 8 · Offrir et être accompagné -->
+<section class="section" aria-labelledby="offrir-title">
+  <div class="wrap">
+    <div class="head center" style="text-align:center;justify-content:center"><div style="justify-items:center"><p class="eyebrow">Services</p><h2 id="offrir-title" class="display-l words">L’art d’offrir.</h2></div></div>
+    <ul class="gifts" role="list">
+      <li class="reveal" style="--i:0"><div class="gifts__visual gifts__visual--box" aria-hidden="true"></div><h3>Les écrins</h3><p>Découverte, signature, sur mesure : un coffret pour chaque intention.</p><a class="link" href="/coffrets">Découvrir</a></li>
+      <li class="reveal" style="--i:1"><div class="gifts__visual gifts__visual--letter" aria-hidden="true"></div><h3>Le mot personnel</h3><p>Un message accompagne votre cadeau. Le prix n’y figure pas.</p><a class="link" href="/coffrets#composer">Composer</a></li>
+      <li class="reveal" style="--i:2"><div class="gifts__visual gifts__visual--rdv" aria-hidden="true"></div><h3>Le rendez-vous</h3><p>Un conseiller vous reçoit en visioconférence pour choisir avec vous.</p><button class="link" type="button" data-open="rdv">Prendre rendez-vous</button></li>
+    </ul>
+  </div>
+</section>
+
+<!-- 9 · Le Cercle -->
+<section class="section section--alt" aria-labelledby="cercle-title">
+  <div class="wrap split">
+    <div class="stack-l">
+      <p class="eyebrow">Le Cercle {{brand}}</p>
+      <h2 id="cercle-title" class="display-l words">Un cercle, pas un programme.</h2>
+      <p class="lead reveal">Le Cercle réunira les passionnés et les collectionneurs de la maison. Il est en préparation.</p>
+      <a class="link reveal" href="/cercle">Découvrir Le Cercle</a>
+    </div>
+    <ol class="tiers" role="list">
+      <li class="reveal" style="--i:0"><span class="numeral">I</span><span>Member</span><small>L’annonce des nouvelles créations</small></li>
+      <li class="reveal" style="--i:1"><span class="numeral">II</span><span>Privé</span><small>Conseil personnel et invitations</small></li>
+      <li class="reveal" style="--i:2"><span class="numeral">III</span><span>Collector</span><small>Priorité sur les éditions limitées</small></li>
+      <li class="reveal" style="--i:3"><span class="numeral">IV</span><span>Fondateur</span><small>Les premiers membres de la maison</small></li>
+    </ol>
+  </div>
+</section>
+
+<!-- 10 · Nos engagements -->
+<section class="section" aria-labelledby="engagements-title">
+  <div class="wrap">
+    <div class="head"><div><p class="eyebrow">Nos engagements</p><h2 id="engagements-title" class="display-l words">Dire où nous en sommes.</h2></div><a class="link" href="/maison#engagements">La maison</a></div>
+    <ol class="list-num" role="list">
+      <li class="reveal" style="--i:0"><span class="numeral">I</span><h3>Aucune vente avant conformité</h3><p>Chaque création respectera la réglementation cosmétique européenne avant d’être proposée.</p></li>
+      <li class="reveal" style="--i:1"><span class="numeral">II</span><h3>Aucune rareté inventée</h3><p>Une édition limitée sera annoncée avec son tirage réel. Jamais de faux compte à rebours.</p></li>
+      <li class="reveal" style="--i:2"><span class="numeral">III</span><h3>Aucun faux avis</h3><p>Les avis viendront de clients vérifiés, ou ne viendront pas.</p></li>
+      <li class="reveal" style="--i:3"><span class="numeral">IV</span><h3>Vos données chez vous</h3><p>Passeport, favoris et panier restent sur votre appareil.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- 11 · Le Journal -->
+<section class="section section--alt" aria-labelledby="journal-title">
+  <div class="wrap">
+    <div class="head">
+      <div><p class="eyebrow">Le Journal</p><h2 id="journal-title" class="display-l words">L’art du parfum.</h2></div>
+      <a class="link" href="/journal">Tous les articles</a>
+    </div>
+    <div class="list-num" style="gap:clamp(1.5rem,3vw,2.5rem)">
+      <a class="article-card reveal" style="--i:0" href="/journal-familles"><div class="frame"><span class="frame__caption">Guide</span></div><p class="eyebrow">Comprendre</p><h3>Les familles olfactives, simplement.</h3></a>
+      <a class="article-card reveal" style="--i:1" href="/journal-concentrations"><div class="frame frame--dark"><span class="frame__caption">Guide</span></div><p class="eyebrow">Choisir</p><h3>Extrait, eau de parfum, huile : les différences.</h3></a>
+      <a class="article-card reveal" style="--i:2" href="/journal-conservation"><div class="frame"><span class="frame__caption">Conseil</span></div><p class="eyebrow">Conserver</p><h3>Garder un parfum intact, longtemps.</h3></a>
+    </div>
+  </div>
+</section>

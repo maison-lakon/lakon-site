@@ -1,0 +1,69 @@
+<!--
+title: Coffrets & écrins
+description: Les coffrets {{brand}} et le configurateur pour composer votre propre écrin.
+-->
+<section class="section section--tight" aria-labelledby="coffrets-title">
+  <div class="wrap">
+    <ol class="crumbs" role="list"><li><a href="/">Accueil</a></li><li aria-current="page">Coffrets &amp; écrins</li></ol>
+    <div class="head" style="margin-top:2rem"><div>
+      <p class="eyebrow">Coffrets &amp; écrins</p>
+      <h1 id="coffrets-title" class="display-l words">Offrir, découvrir, composer.</h1>
+      <p class="lead">Les coffrets suivront les créations réellement disponibles. Vous pouvez déjà composer votre écrin idéal et nous envoyer votre demande.</p>
+    </div></div>
+  </div>
+</section>
+
+<section id="types" class="section section--alt" aria-labelledby="types-title">
+  <div class="wrap">
+    <h2 id="types-title" class="eyebrow" style="margin-bottom:2rem">Les coffrets</h2>
+    <div class="panel">
+      <div><span class="numeral">I</span><h3>Découverte</h3><p>Plusieurs formats réduits pour rencontrer la maison.</p></div>
+      <div><span class="numeral">II</span><h3>Signature</h3><p>Un parfum principal et un produit complémentaire.</p></div>
+      <div><span class="numeral">III</span><h3>Héritage</h3><p>Un assortiment de plusieurs fragrances.</p></div>
+      <div><span class="numeral">IV</span><h3>Cadeau</h3><p>Une sélection personnalisable avec message.</p></div>
+      <div><span class="numeral">V</span><h3>Voyage</h3><p>Des formats adaptés aux déplacements.</p></div>
+      <div><span class="numeral">VI</span><h3>Duo &amp; trio</h3><p>Des associations de fragrances complémentaires.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="composer" class="section" aria-labelledby="composer-title">
+  <div class="wrap">
+    <div class="head"><div><p class="eyebrow">Configurateur</p><h2 id="composer-title" class="display-m">Composez votre écrin.</h2></div></div>
+    <form class="configurator" data-box-builder>
+      <div class="stack-l">
+        <fieldset class="step" style="border:0;padding:0;margin:0">
+          <legend class="step__title"><span class="numeral">1</span> Le coffret</legend>
+          <div class="options">
+            <label class="option"><input type="radio" name="type" value="Découverte" data-slots="3" checked><strong>Découverte</strong><span>3 créations</span></label>
+            <label class="option"><input type="radio" name="type" value="Héritage" data-slots="5"><strong>Héritage</strong><span>5 créations</span></label>
+            <label class="option"><input type="radio" name="type" value="Duo" data-slots="2"><strong>Duo</strong><span>2 créations</span></label>
+          </div>
+        </fieldset>
+        <fieldset class="step" style="border:0;padding:0;margin:0">
+          <legend class="step__title"><span class="numeral">2</span> Les créations <span class="small" data-slot-info></span></legend>
+          <div class="options" data-box-products></div>
+        </fieldset>
+        <fieldset class="step" style="border:0;padding:0;margin:0">
+          <legend class="step__title"><span class="numeral">3</span> La présentation</legend>
+          <div class="options">
+            <label class="option"><input type="radio" name="presentation" value="Écrin noir" checked><strong>Écrin noir</strong><span>Obsidienne, filet or</span></label>
+            <label class="option"><input type="radio" name="presentation" value="Écrin ivoire"><strong>Écrin ivoire</strong><span>Ivoire, filet or</span></label>
+          </div>
+        </fieldset>
+        <div class="step">
+          <p class="step__title"><span class="numeral">4</span> Le message</p>
+          <div class="field"><label for="box-msg">Message personnel (facultatif)</label><textarea id="box-msg" name="message" maxlength="300"></textarea></div>
+        </div>
+      </div>
+      <aside class="configurator__summary summary" aria-label="Votre écrin">
+        <p class="eyebrow">Votre écrin</p>
+        <div class="box-preview" data-box-preview aria-hidden="true"></div>
+        <ul role="list" data-box-summary></ul>
+        <p class="small">Prix : communiqué au lancement des créations.</p>
+        <button class="btn btn--solid" type="submit">Envoyer ma demande</button>
+        <p class="form-status" role="status" data-form-status="box"></p>
+      </aside>
+    </form>
+  </div>
+</section>

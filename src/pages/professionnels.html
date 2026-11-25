@@ -1,0 +1,44 @@
+<!--
+title: Professionnels
+description: {{brand}} Pro : marketing olfactif, mariages et événements, cadeaux d’entreprise, création de marques. Demandes de devis.
+-->
+<section class="section" aria-labelledby="pro-title">
+  <div class="wrap stack-l">
+    <p class="eyebrow">{{brand}} Pro</p>
+    <h1 id="pro-title" class="display-l words">Une signature olfactive pour les lieux et les moments.</h1>
+    <p class="lead reveal">Ces services sont en préparation. Nous étudions chaque demande une à une et ne proposerons une prestation que lorsque les partenaires nécessaires seront en place.</p>
+  </div>
+</section>
+<section class="section section--alt" aria-labelledby="services-pro">
+  <div class="wrap">
+    <h2 id="services-pro" class="eyebrow" style="margin-bottom:2rem">Domaines</h2>
+    <div class="panel">
+      <div id="olfactif"><h3>Marketing olfactif</h3><p>Hôtels, boutiques, showrooms, concessions, espaces de travail.</p></div>
+      <div id="evenements"><h3>Mariages &amp; événements</h3><p>Coffrets invités, étiquettes personnalisées, signature d’un événement.</p></div>
+      <div id="cadeaux"><h3>Cadeaux d’entreprise</h3><p>Coffrets personnalisés pour clients et collaborateurs.</p></div>
+      <div id="marque"><h3>Création de marques</h3><p>Collections pour créateurs et marques, sous conditions.</p></div>
+    </div>
+  </div>
+</section>
+<section id="devis" class="section" aria-labelledby="devis-title">
+  <div class="wrap split" style="align-items:start">
+    <div class="stack"><p class="eyebrow">Demande de devis</p><h2 id="devis-title" class="display-m">Parlez-nous de votre projet.</h2><p class="lead">Réponse personnalisée. Aucune donnée n’est utilisée à d’autres fins.</p></div>
+    <form class="form" data-mail-form="pro">
+      <div class="form-row">
+        <div class="field"><label for="pro-name">Nom</label><input id="pro-name" name="nom" required autocomplete="name"></div>
+        <div class="field"><label for="pro-email">E-mail</label><input id="pro-email" type="email" name="email" required autocomplete="email"></div>
+      </div>
+      <div class="form-row">
+        <div class="field"><label for="pro-type">Type de demande</label><select id="pro-type" name="type"><option>Marketing olfactif</option><option>Mariage ou événement</option><option>Cadeaux d’entreprise</option><option>Création de marque</option><option>Distribution</option></select></div>
+        <div class="field"><label for="pro-date">Date envisagée</label><input id="pro-date" type="date" name="date"></div>
+      </div>
+      <div class="form-row">
+        <div class="field"><label for="pro-qty">Nombre de personnes ou de pièces</label><input id="pro-qty" type="number" min="1" name="quantite"></div>
+        <div class="field"><label for="pro-budget">Budget indicatif</label><input id="pro-budget" name="budget" placeholder="Ex. 2 000 €"></div>
+      </div>
+      <div class="field"><label for="pro-msg">Votre projet</label><textarea id="pro-msg" name="message" required maxlength="2000"></textarea></div>
+      <div><button class="btn btn--solid" type="submit">Envoyer la demande</button></div>
+      <p class="form-status" role="status" data-form-status="pro"></p>
+    </form>
+  </div>
+</section>

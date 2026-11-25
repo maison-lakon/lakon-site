@@ -1,0 +1,26 @@
+<!--
+title: Panier
+description: Votre panier {{brand}}.
+-->
+<section class="section section--tight" aria-labelledby="cart-title">
+  <div class="wrap">
+    <h1 id="cart-title" class="display-l">Panier</h1>
+    <div class="split" style="align-items:start;margin-top:2.5rem">
+      <div>
+        <ul class="cart-lines" role="list" data-cart-lines></ul>
+        <div class="stack" data-cart-empty>
+          <p class="lead">Votre panier est vide.</p>
+          <p class="small">Les créations sont en développement : aucune n’est encore en vente. Vous pouvez demander à être prévenu de leur lancement depuis chaque fiche.</p>
+          <a class="link" href="/parfums">Voir les parfums</a>
+        </div>
+      </div>
+      <aside class="summary" aria-label="Récapitulatif">
+        <p class="eyebrow">Récapitulatif</p>
+        <ul role="list"><li>Sous-total : <strong data-cart-total>—</strong></li><li>Livraison : calculée à la commande</li></ul>
+        <div class="field"><label for="gift">Message cadeau (facultatif)</label><textarea id="gift" maxlength="300" data-gift-message></textarea></div>
+        <button class="btn btn--solid" type="button" data-checkout disabled>Passer commande</button>
+        <p class="notice">Le paiement sécurisé n’est pas encore relié : il sera activé avec les premières créations disponibles.</p>
+      </aside>
+    </div>
+  </div>
+</section>
