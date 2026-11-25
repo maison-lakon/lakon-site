@@ -1,0 +1,15 @@
+<button class="concierge-launch" type="button" aria-controls="concierge" aria-expanded="false" data-concierge-open>Concierge</button>
+<dialog class="concierge" id="concierge" aria-labelledby="concierge-title">
+  <div class="concierge__head">
+    <div><p id="concierge-title">{{brand}} Concierge</p><p class="eyebrow">Version guidée</p></div>
+    <button class="icon-btn" type="button" aria-label="Fermer le concierge" data-concierge-close><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+  </div>
+  <div class="concierge__log" role="log" aria-live="polite" data-concierge-log></div>
+  <div class="concierge__chips" data-concierge-chips></div>
+  <form class="concierge__form" data-concierge-form>
+    <label class="sr" for="concierge-input">Votre message</label>
+    <input id="concierge-input" type="text" autocomplete="off" maxlength="240" placeholder="Ex. un boisé pour un mariage, qui se remarque">
+    <button class="btn btn--solid" type="submit" style="min-height:2.75rem;padding:0 1rem">Envoyer</button>
+  </form>
+  <p class="concierge__note">Version guidée, sans intelligence artificielle : vos messages restent dans votre navigateur.</p>
+</dialog>

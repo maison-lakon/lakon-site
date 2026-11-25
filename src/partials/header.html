@@ -1,0 +1,30 @@
+<div class="announce" aria-label="Informations">
+  <!-- @announcements -->
+</div>
+<header class="header" data-header>
+  <div class="wrap header__bar">
+    <div class="header__left">
+      <button class="icon-btn icon-btn--label" type="button" data-open="menu" aria-controls="menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8h18M3 16h18"/></svg><span>Menu</span>
+      </button>
+      <button class="icon-btn" type="button" data-open="search" aria-controls="search" aria-expanded="false" aria-label="Rechercher">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.2-4.2"/></svg>
+      </button>
+    </div>
+    <a class="wordmark" href="/" aria-label="{{brand}}, accueil">{{brand}}</a>
+    <div class="header__tools">
+      <button class="icon-btn icon-btn--text" type="button" data-open="rdv" aria-controls="rdv" aria-expanded="false">Rendez-vous</button>
+      <button class="icon-btn" type="button" data-open="account" aria-controls="account" aria-expanded="false" aria-label="Mon compte">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg>
+      </button>
+      <a class="icon-btn" href="/compte#favoris" aria-label="Mes favoris">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg>
+        <span class="count" data-fav-count></span>
+      </a>
+      <button class="icon-btn" type="button" data-open="bag" aria-controls="bag" aria-expanded="false" aria-label="Panier">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12H6.2z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+        <span class="count" data-cart-count></span>
+      </button>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,114 @@
+<!-- Side menu: categories on the left; the hovered one stands out, the others dim; its sub-sections open beside it. -->
+<dialog class="layer layer--left menu" id="menu" aria-label="Menu">
+  <div class="layer__panel menu__panel">
+    <div class="layer__head">
+      <span class="eyebrow">Menu</span>
+      <button class="icon-btn" type="button" data-close aria-label="Fermer le menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    </div>
+    <nav aria-label="Navigation principale">
+      <ul class="menu__list" role="list">
+        <li class="menu__item" data-sub="nouveautes"><a href="/parfums">Nouveautés</a></li>
+        <li class="menu__item" data-sub="parfums"><a href="/parfums">Parfums</a></li>
+        <li class="menu__item" data-sub="coffrets"><a href="/coffrets">Coffrets &amp; écrins</a></li>
+        <li class="menu__item menu__item--accent" data-sub="collector"><a href="/collector">Collector</a></li>
+        <li class="menu__item" data-sub="experience"><a href="/diagnostic">L’Expérience</a></li>
+        <li class="menu__item" data-sub="cercle"><a href="/cercle">Le Cercle</a></li>
+        <li class="menu__item" data-sub="maison"><a href="/maison">La Maison</a></li>
+        <li class="menu__item" data-sub="pro"><a href="/professionnels">Professionnels</a></li>
+        <li class="menu__item" data-sub="journal"><a href="/journal">Le Journal</a></li>
+      </ul>
+    </nav>
+    <ul class="menu__foot" role="list">
+      <li><button type="button" data-open="account">Mon compte</button></li>
+      <li><button type="button" data-open="rdv">Prendre rendez-vous</button></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+  </div>
+  <div class="menu__sub" aria-live="polite">
+    <div class="menu__group" data-group="nouveautes"><p class="eyebrow">Nouveautés</p><ul role="list"><li><a href="/parfums">Les premières créations</a></li><li><a href="/parfums/silence">Silence, l’univers fondateur</a></li><li><a href="/journal">Actualités de la maison</a></li></ul></div>
+    <div class="menu__group" data-group="parfums"><p class="eyebrow">Parfums</p><ul role="list"><li><a href="/parfums">Tous les parfums</a></li><li><a href="/parfums?genre=masculin">Parfums masculins</a></li><li><a href="/parfums?genre=mixte">Parfums mixtes</a></li><li><span class="soon">Parfums féminins</span></li><li><span class="soon">Extraits de parfum</span></li><li><span class="soon">Muscs et huiles</span></li></ul>
+      <p class="eyebrow" style="margin-top:1.5rem">Les sept univers</p><ul role="list" class="menu__cols"><li><a href="/parfums/silence">Silence</a></li><li><a href="/parfums/discipline">Discipline</a></li><li><a href="/parfums/heritage">Héritage</a></li><li><a href="/parfums/souverain">Souverain</a></li><li><a href="/parfums/vertu">Vertu</a></li><li><a href="/parfums/immortel">Immortel</a></li><li><a href="/parfums/honneur">Honneur</a></li></ul></div>
+    <div class="menu__group" data-group="coffrets"><p class="eyebrow">Coffrets &amp; écrins</p><ul role="list"><li><a href="/coffrets#types">Coffret découverte</a></li><li><a href="/coffrets#types">Coffret signature</a></li><li><a href="/coffrets#types">Coffret cadeau</a></li><li><a href="/coffrets#types">Duos et trios</a></li><li><a href="/coffrets#composer">Composez votre écrin</a></li></ul></div>
+    <div class="menu__group" data-group="collector"><p class="eyebrow">Collector</p><ul role="list"><li><a href="/collector">{{brand}} Archives</a></li><li><a href="/pieces">Pièces de collection</a></li><li><span class="soon">Éditions limitées</span></li><li><span class="soon">Accès sur invitation</span></li></ul></div>
+    <div class="menu__group" data-group="experience"><p class="eyebrow">L’Expérience</p><ul role="list"><li><a href="/diagnostic">Diagnostic olfactif</a></li><li><a href="/compte#passeport">Passeport olfactif</a></li><li><button type="button" data-concierge-open>{{brand}} Concierge</button></li><li><button type="button" data-open="rdv">Rendez-vous olfactif</button></li><li><span class="soon">Mon laboratoire</span></li></ul></div>
+    <div class="menu__group" data-group="cercle"><p class="eyebrow">Le Cercle</p><ul role="list"><li><a href="/cercle">Présentation</a></li><li><a href="/cercle">Les quatre cercles</a></li><li><span class="soon">Abonnements</span></li><li><span class="soon">Mon espace membre</span></li></ul></div>
+    <div class="menu__group" data-group="maison"><p class="eyebrow">La Maison</p><ul role="list"><li><a href="/maison#histoire">Notre histoire</a></li><li><a href="/maison#philosophie">Notre philosophie</a></li><li><a href="/maison#savoir-faire">Notre savoir-faire</a></li><li><a href="/maison#inspirations">Nos inspirations</a></li><li><a href="/maison#engagements">Nos engagements</a></li></ul></div>
+    <div class="menu__group" data-group="pro"><p class="eyebrow">Professionnels</p><ul role="list"><li><a href="/professionnels#olfactif">Marketing olfactif</a></li><li><a href="/professionnels#evenements">Mariages et événements</a></li><li><a href="/professionnels#cadeaux">Cadeaux d’entreprise</a></li><li><a href="/professionnels#marque">Création de marques</a></li><li><a href="/professionnels#devis">Demander un devis</a></li></ul></div>
+    <div class="menu__group" data-group="journal"><p class="eyebrow">Le Journal</p><ul role="list"><li><a href="/journal-familles">Les familles olfactives</a></li><li><a href="/journal-concentrations">Extrait, eau de parfum, huile</a></li><li><a href="/journal-conservation">Conserver un parfum</a></li><li><a href="/journal">Tous les articles</a></li></ul></div>
+  </div>
+</dialog>
+
+<!-- Search: instant results from the catalogue, without leaving the page. -->
+<dialog class="layer layer--top search" id="search" aria-label="Rechercher">
+  <div class="layer__panel">
+    <div class="wrap search__inner">
+      <form class="search__form" role="search" data-search-form>
+        <label class="sr" for="search-input">Rechercher une création, une note, une famille</label>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.2-4.2"/></svg>
+        <input id="search-input" type="search" autocomplete="off" placeholder="Un boisé pour l’hiver, cuir, Héritage…" data-search-input>
+        <button class="icon-btn" type="button" data-close aria-label="Fermer la recherche"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+      </form>
+      <div class="search__body">
+        <div><p class="eyebrow">Suggestions</p><ul class="search__suggest" role="list"><li><button type="button" data-q="boisé">Boisé</button></li><li><button type="button" data-q="cuir">Cuir</button></li><li><button type="button" data-q="frais">Frais</button></li><li><button type="button" data-q="oud">Oud</button></li><li><button type="button" data-q="musc">Musc</button></li></ul></div>
+        <div><p class="eyebrow" data-search-label>Créations</p><ul class="search__results" role="list" data-search-results aria-live="polite"></ul></div>
+      </div>
+    </div>
+  </div>
+</dialog>
+
+<!-- Account: a centred panel, the page stays behind. -->
+<dialog class="layer layer--center account" id="account" aria-labelledby="account-title">
+  <div class="layer__panel account__panel">
+    <button class="icon-btn layer__close" type="button" data-close aria-label="Fermer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    <p class="wordmark" style="font-size:1.1rem">{{brand}}</p>
+    <h2 id="account-title" class="display-s" style="text-align:center">Mon espace</h2>
+    <p class="small" style="text-align:center">Les comptes clients ouvriront avec la boutique. Pour l'instant, votre passeport et vos favoris restent uniquement sur cet appareil.</p>
+    <div class="account__local">
+      <p class="eyebrow">Sur cet appareil</p>
+      <ul role="list"><li><a href="/compte#passeport">Mon passeport olfactif</a></li><li><a href="/compte#favoris">Mes favoris</a></li><li><a href="/diagnostic">Faire le diagnostic</a></li></ul>
+    </div>
+  </div>
+</dialog>
+
+<!-- Bag: side drawer from the right. -->
+<dialog class="layer layer--right bag" id="bag" aria-labelledby="bag-title">
+  <div class="layer__panel">
+    <div class="layer__head"><h2 id="bag-title" class="display-s">Panier</h2><button class="icon-btn" type="button" data-close aria-label="Fermer le panier"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
+    <ul class="cart-lines" role="list" data-bag-lines></ul>
+    <div class="stack" data-bag-empty><p class="lead">Votre panier est vide.</p><p class="small">Les créations sont en développement : vous pouvez demander à être prévenu depuis chaque fiche.</p></div>
+    <div class="bag__foot">
+      <p class="caps" style="display:flex;justify-content:space-between"><span>Sous-total</span><span data-bag-total>—</span></p>
+      <a class="btn btn--solid" href="/panier">Voir le panier</a>
+      <p class="small">Paiement sécurisé activé avec les premières créations disponibles.</p>
+    </div>
+  </div>
+</dialog>
+
+<!-- Appointment request. -->
+<dialog class="layer layer--center rdv" id="rdv" aria-labelledby="rdv-title">
+  <div class="layer__panel account__panel">
+    <button class="icon-btn layer__close" type="button" data-close aria-label="Fermer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    <p class="eyebrow" style="text-align:center">Rendez-vous olfactif</p>
+    <h2 id="rdv-title" class="display-s" style="text-align:center">Un conseiller, pour vous seul.</h2>
+    <p class="small" style="text-align:center">Trente minutes pour comprendre les créations, préparer un cadeau ou un projet. Rendez-vous en visioconférence pour commencer.</p>
+    <form class="form" data-mail-form="rendez-vous">
+      <fieldset class="field" style="border:0;padding:0;margin:0"><legend>Motif</legend>
+        <div class="options">
+          <label class="option"><input type="radio" name="motif" value="Découvrir les créations" checked><strong>Découvrir</strong><span>Les créations et leurs univers</span></label>
+          <label class="option"><input type="radio" name="motif" value="Préparer un cadeau"><strong>Offrir</strong><span>Un cadeau, un écrin</span></label>
+          <label class="option"><input type="radio" name="motif" value="Projet professionnel"><strong>Projet</strong><span>Événement, entreprise</span></label>
+        </div>
+      </fieldset>
+      <div class="form-row">
+        <div class="field"><label for="r-date">Date souhaitée</label><input id="r-date" type="date" name="date" required></div>
+        <div class="field"><label for="r-slot">Moment</label><select id="r-slot" name="moment"><option>Matin</option><option>Après-midi</option><option>Soir</option></select></div>
+      </div>
+      <div class="form-row">
+        <div class="field"><label for="r-name">Nom</label><input id="r-name" name="nom" required autocomplete="name"></div>
+        <div class="field"><label for="r-mail">E-mail</label><input id="r-mail" type="email" name="email" required autocomplete="email"></div>
+      </div>
+      <button class="btn btn--solid" type="submit">Demander ce rendez-vous</button>
+      <p class="form-status" role="status" data-form-status="rendez-vous"></p>
+    </form>
+  </div>
+</dialog>

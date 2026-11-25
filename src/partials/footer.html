@@ -1,0 +1,48 @@
+<section class="services-strip" aria-label="Services de la maison">
+  <ul class="wrap services-strip__list" role="list">
+    <li><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M3 9h17v13H3zM20 13h5l4 4v5h-9"/><circle cx="9" cy="24" r="2.5"/><circle cx="24" cy="24" r="2.5"/></svg><div><p class="caps">Livraison</p><p class="small">Modalités et délais précisés à la commande.</p></div></li>
+    <li><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M6 26V12l10-6 10 6v14z"/><path d="M12 26v-8h8v8"/></svg><div><p class="caps">Écrin &amp; message</p><p class="small">Un mot personnel pour accompagner un cadeau.</p></div></li>
+    <li><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="11"/><path d="M16 9v7l5 3"/></svg><div><p class="caps">Rendez-vous</p><p class="small"><button type="button" class="link-inline" data-open="rdv">Un conseiller, en visioconférence</button></p></div></li>
+    <li><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 7h22v15H13l-6 5v-5H5z"/></svg><div><p class="caps">Conseil</p><p class="small"><button type="button" class="link-inline" data-concierge-open>Le concierge, à tout moment</button></p></div></li>
+  </ul>
+</section>
+
+<footer class="footer theme-dark">
+  <div class="wrap">
+    <div class="footer__news">
+      <div class="stack">
+        <p class="eyebrow">La lettre de la maison</p>
+        <p class="display-s">Inscrivez-vous pour être informé des nouvelles créations et des exclusivités.</p>
+      </div>
+      <form class="newsletter" data-mail-form="newsletter" aria-label="Inscription à la lettre">
+        <label class="sr" for="nl-email">Votre adresse e-mail</label>
+        <input id="nl-email" type="email" name="email" placeholder="Votre adresse e-mail" autocomplete="email" required>
+        <button type="submit">Confirmer</button>
+      </form>
+      <p class="small" data-form-status="newsletter" role="status"></p>
+      <p class="small">Une lettre rare, jamais de relance commerciale. Désinscription en un clic.</p>
+    </div>
+
+    <div class="footer__top">
+      <div class="stack">
+        <a class="wordmark" href="/" style="justify-self:start;font-size:1.6rem">{{brand}}</a>
+        <p class="italic" style="font-family:var(--serif);font-size:1.25rem">{{signature}}</p>
+      </div>
+      <div><h2>Service client</h2><ul role="list">
+        <li><a href="/contact">Nous contacter</a></li><li><button type="button" data-open="rdv">Prendre rendez-vous</button></li><li><a href="/livraison-retours">Livraison et retours</a></li><li><a href="/faq">Questions fréquentes</a></li><li><button type="button" data-open="account">Mon compte</button></li>
+      </ul></div>
+      <div><h2>La Maison</h2><ul role="list">
+        <li><a href="/maison">Notre histoire</a></li><li><a href="/maison#engagements">Nos engagements</a></li><li><a href="/collector">{{brand}} Archives</a></li><li><a href="/journal">Le Journal</a></li><li><a href="/professionnels">Accès professionnel</a></li>
+      </ul></div>
+      <div><h2>Légal</h2><ul role="list">
+        <li><a href="/mentions-legales">Mentions légales</a></li><li><a href="/cgv">Conditions générales de vente</a></li><li><a href="/confidentialite">Politique de confidentialité</a></li><li><a href="/confidentialite#cookies">Gestion des cookies</a></li><li><a href="/accessibilite">Accessibilité</a></li>
+      </ul></div>
+    </div>
+
+    <div class="footer__bottom">
+      <label class="toggle"><input type="checkbox" data-contrast><span class="toggle__track" aria-hidden="true"></span>Accessibilité : meilleur contraste</label>
+      <p>© {{year}} {{brand}}. Tous droits réservés.</p>
+      <p>France · Français · EUR</p>
+    </div>
+  </div>
+</footer>
