@@ -1,0 +1,14 @@
+{
+  "name": "lakon-boutique",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "LAKON — maison de parfumerie. Site autonome, sans dépendance.",
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "build": "node scripts/build.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
