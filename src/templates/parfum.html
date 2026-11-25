@@ -1,0 +1,73 @@
+<div class="wrap">
+  <div class="pdp">
+    <div class="stack">
+      <figure class="pdp__media unfold" style="--tone:{{tone}};margin:0">
+        {{flacon}}
+        <figcaption class="pdp__caption">Visuel conceptuel · flacon en développement</figcaption>
+      </figure>
+    </div>
+
+    <div class="pdp__info">
+      <ol class="crumbs" role="list"><li><a href="/">Accueil</a></li><li><a href="/parfums">Parfums</a></li><li aria-current="page">{{name}}</li></ol>
+      <p class="eyebrow">{{numeral}} · {{familiesLabel}}</p>
+      <h1 class="display-l words">{{name}}</h1>
+      <p class="display-s italic" style="color:var(--fg-soft)">{{motto}}</p>
+      <p class="lead">{{story}}</p>
+
+      <dl class="facts">
+        <dt>Statut</dt><dd>{{statusLabel}}</dd>
+        <dt>Prix</dt><dd>{{priceLabel}}</dd>
+        <dt>Concentration</dt><dd>{{concentrationLabel}}</dd>
+        <dt>Genre</dt><dd>{{genderLabel}}</dd>
+        <dt>Occasions</dt><dd>{{occasions}}</dd>
+        <dt>Saisons</dt><dd>{{seasons}}</dd>
+      </dl>
+
+      <div class="actions">
+        {{buy}}
+        <button class="btn" type="button" data-fav="{{slug}}" aria-pressed="false">Ajouter aux favoris</button>
+      </div>
+      <p class="form-status" role="status" data-notify-status></p>
+
+      <div class="tabs" data-tabs>
+        <div role="tablist" aria-label="Détails du parfum">
+          <button type="button" role="tab" id="t-notes" aria-controls="p-notes" aria-selected="true">Notes</button>
+          <button type="button" role="tab" id="t-profil" aria-controls="p-profil" aria-selected="false">Profil</button>
+          <button type="button" role="tab" id="t-compo" aria-controls="p-compo" aria-selected="false">Composition</button>
+          <button type="button" role="tab" id="t-rituel" aria-controls="p-rituel" aria-selected="false">Rituel</button>
+          <button type="button" role="tab" id="t-livraison" aria-controls="p-livraison" aria-selected="false">Livraison</button>
+        </div>
+        <div role="tabpanel" id="p-notes" aria-labelledby="t-notes" tabindex="0">
+          <ol class="pyramid" role="list">
+            <li><span class="caps">Tête</span><span>{{notesTop}}</span></li>
+            <li><span class="caps">Cœur</span><span>{{notesHeart}}</span></li>
+            <li><span class="caps">Fond</span><span>{{notesBase}}</span></li>
+          </ol>
+          <p class="small">Direction olfactive de travail, susceptible d’évoluer avec la formule définitive.</p>
+        </div>
+        <div role="tabpanel" id="p-profil" aria-labelledby="t-profil" tabindex="0" hidden>
+          <dl class="gauges">{{gauges}}</dl>
+          <p class="small">Tenue et sillage seront indiqués après des tests réels, jamais avant.</p>
+        </div>
+        <div role="tabpanel" id="p-compo" aria-labelledby="t-compo" tabindex="0" hidden>
+          <p>La liste des ingrédients (INCI) et des allergènes réglementaires sera publiée avec la formule définitive, avant toute mise en vente.</p>
+        </div>
+        <div role="tabpanel" id="p-rituel" aria-labelledby="t-rituel" tabindex="0" hidden>
+          <p>Vaporiser à distance, sur la peau ou les vêtements, à la base du cou et à l’intérieur des poignets, sans frotter. Conserver à l’abri de la lumière et de la chaleur.</p>
+        </div>
+        <div role="tabpanel" id="p-livraison" aria-labelledby="t-livraison" tabindex="0" hidden>
+          <p>Modalités de livraison et de retour précisées dans nos <a href="/livraison-retours">conditions</a> au moment du lancement. Message personnel possible pour un cadeau.</p>
+        </div>
+      </div>
+
+      <a class="link" href="#concierge" data-concierge-open>Demander conseil au concierge</a>
+    </div>
+  </div>
+</div>
+
+<section class="section section--alt" aria-labelledby="related-title">
+  <div class="wrap">
+    <div class="head"><div><p class="eyebrow">Dans le même esprit</p><h2 id="related-title" class="display-m">Pour l’accompagner</h2></div></div>
+    <ul class="grid-products" role="list">{{related}}</ul>
+  </div>
+</section>
