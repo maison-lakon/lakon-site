@@ -5,7 +5,7 @@ Site indépendant de la maison LAKON (*La force du silence.*), sans Shopify et s
 ## Lancer en local
 
 ```powershell
-cd "C:\Users\FlowUP\Desktop\Lakon Dossier\Site Code\lakon-boutique"
+cd lakon-site
 node scripts/serve.mjs
 ```
 
