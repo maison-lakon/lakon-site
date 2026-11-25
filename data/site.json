@@ -1,0 +1,35 @@
+{
+  "brand": "LAKON",
+  "signature": "La force du silence.",
+  "tagline": "Certaines présences n’ont pas besoin de mots.",
+  "description": "LAKON, maison de parfumerie. Des créations pour ceux dont la présence se remarque sans qu’ils aient besoin de parler.",
+  "contactEmail": "",
+  "contactEmailNote": "À renseigner : l’adresse qui reçoit les demandes (contact, listes d’attente, devis). Tant qu’elle est vide, les formulaires l’indiquent au visiteur.",
+  "currency": "EUR",
+  "locale": "fr-FR",
+  "checkoutProvider": null,
+  "checkoutNote": "Aucun prestataire de paiement n’est encore relié. Le panier fonctionne ; le paiement sera branché (Stripe ou équivalent) quand les premiers produits seront conformes et en stock.",
+  "social": [],
+  "announcements": [
+    "Conseil personnalisé avant chaque achat",
+    "Diagnostic olfactif en huit questions",
+    "Premières créations en préparation"
+  ],
+  "media": {
+    "_note": "Vos vidéos et photos. Déposez les fichiers dans src/assets/media/ puis indiquez leur chemin, par exemple \"/assets/media/ouverture.mp4\". Laisser vide : une scène animée sobre s'affiche à la place, sans fausse photo.",
+    "heroVideo": "",
+    "heroPoster": "",
+    "secondVideo": "",
+    "secondPoster": "",
+    "zoomImage": "",
+    "zoomImageAlt": "",
+    "collectorImage": "",
+    "collectorImageAlt": ""
+  },
+  "iconics": [
+    "silence",
+    "heritage",
+    "souverain",
+    "immortel"
+  ]
+}
