@@ -5,21 +5,33 @@ description: Les créations {{brand}} : sept univers, de Silence à Honneur. Fam
 <section class="section section--tight" aria-labelledby="parfums-title">
   <div class="wrap">
     <ol class="crumbs" role="list"><li><a href="/">Accueil</a></li><li aria-current="page">Parfums</li></ol>
-    <div class="head" style="margin-top:2rem">
+    <div class="head collection-head" style="margin-top:2rem">
       <div>
-        <p class="eyebrow">La collection</p>
-        <h1 id="parfums-title" class="display-l words">Les parfums</h1>
-        <p class="lead">Sept créations en développement. Elles seront mises en vente lorsqu’elles seront fabriquées et conformes ; d’ici là, vous pouvez demander à être prévenu.</p>
+        <p class="eyebrow">LAKON · Les créations masculines & mixtes</p>
+        <h1 id="parfums-title" class="display-l words">La collection</h1>
+        <p class="lead">Sept sillages, sept caractères. Explorez les familles olfactives et découvrez les créations de la Maison.</p>
       </div>
       <p class="small" role="status" data-results-count></p>
     </div>
 
+    <nav class="family-gallery" aria-label="Explorer les familles olfactives">
+      <button type="button" class="family-tile" data-filter-family="boise"><span class="family-tile__visual family-tile__visual--wood"><span class="family-tile__orb"></span></span><span class="family-tile__label">Boisés</span></button>
+      <button type="button" class="family-tile" data-filter-family="cuir"><span class="family-tile__visual family-tile__visual--leather"><span class="family-tile__orb"></span></span><span class="family-tile__label">Cuir & tabac</span></button>
+      <button type="button" class="family-tile" data-filter-family="ambre"><span class="family-tile__visual family-tile__visual--amber"><span class="family-tile__orb"></span></span><span class="family-tile__label">Ambrés</span></button>
+      <button type="button" class="family-tile" data-filter-family="epice"><span class="family-tile__visual family-tile__visual--spice"><span class="family-tile__orb"></span></span><span class="family-tile__label">Épicés</span></button>
+      <button type="button" class="family-tile" data-filter-family="frais"><span class="family-tile__visual family-tile__visual--fresh"><span class="family-tile__orb"></span></span><span class="family-tile__label">Frais</span></button>
+      <button type="button" class="family-tile" data-filter-family="musc"><span class="family-tile__visual family-tile__visual--incense"><span class="family-tile__orb"></span></span><span class="family-tile__label">Musc & encens</span></button>
+      <button type="button" class="family-tile" data-filter-family="floral"><span class="family-tile__visual family-tile__visual--floral"><span class="family-tile__orb"></span></span><span class="family-tile__label">Floraux</span></button>
+    </nav>
+
+    <div class="catalogue-heading"><div><p class="eyebrow">Les créations LAKON</p><h2 class="display-s">Parfums de caractère</h2></div><div class="catalogue-tools"><button class="catalogue-tool" type="button" data-open="catalogue-filters" aria-haspopup="dialog">Filtrer</button><button class="catalogue-tool" type="button" data-open="catalogue-sort" aria-haspopup="dialog">Trier</button></div></div>
+
     <div class="toolbar">
-      <div class="chips" role="group" aria-label="Familles olfactives">
+      <div class="chips toolbar__families" role="group" aria-label="Familles olfactives">
         <button type="button" class="chip" data-filter-family="all" aria-pressed="true">Toutes</button>
         <!-- @family-options -->
       </div>
-      <div class="chips" role="group" aria-label="Genre">
+      <div class="chips toolbar__gender" role="group" aria-label="Genre">
         <button type="button" class="chip" data-filter-gender="all" aria-pressed="true">Tous</button>
         <button type="button" class="chip" data-filter-gender="masculin" aria-pressed="false">Masculin</button>
         <button type="button" class="chip" data-filter-gender="mixte" aria-pressed="false">Mixte</button>
@@ -33,7 +45,10 @@ description: Les créations {{brand}} : sept univers, de Silence à Honneur. Fam
       </label>
     </div>
 
+    <dialog class="layer layer--right" id="catalogue-filters" aria-label="Filtrer les parfums"><div class="layer__panel"><div class="layer__head"><h2 class="display-s">Filtrer</h2><button class="icon-btn layer__close" type="button" data-close aria-label="Fermer">×</button></div><p class="eyebrow">Famille olfactive</p><div class="chips" role="group" aria-label="Familles olfactives"><button type="button" class="chip" data-filter-family="all" aria-pressed="true">Toutes</button><!-- @family-options --></div><p class="eyebrow">Genre</p><div class="chips" role="group" aria-label="Genre"><button type="button" class="chip" data-filter-gender="all" aria-pressed="true">Tous</button><button type="button" class="chip" data-filter-gender="masculin" aria-pressed="false">Masculin</button><button type="button" class="chip" data-filter-gender="mixte" aria-pressed="false">Mixte</button></div></div></dialog>
+    <dialog class="layer layer--right" id="catalogue-sort" aria-label="Trier les parfums"><div class="layer__panel"><div class="layer__head"><h2 class="display-s">Trier par</h2><button class="icon-btn layer__close" type="button" data-close aria-label="Fermer">×</button></div><label>Ordre<select class="select" data-sort><option value="maison">Ordre de la Maison</option><option value="intensite-asc">Intensité croissante</option><option value="intensite-desc">Intensité décroissante</option></select></label></div></dialog>
+
     <!-- @products-grid:all -->
-    <p class="lead center" style="text-align:center;margin-top:3rem" data-empty hidden>Aucune création ne correspond à ces critères pour l’instant.</p>
+    <p class="lead center" style="text-align:center;margin-top:3rem" data-empty hidden>Aucune création ne correspond à ces critères pour l'instant.</p>
   </div>
 </section>
