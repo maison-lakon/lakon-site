@@ -25,46 +25,86 @@ export async function build() {
 
   const money = (amount) => new Intl.NumberFormat(site.locale, { style: 'currency', currency: site.currency }).format(amount);
   const priceLabel = (p) => (p.status === 'disponible' && p.price != null ? money(p.price) : 'Prix communiqué au lancement');
+  // Short form for cards and lists; the product page keeps the full sentence.
+  const priceShort = (p) => (p.status === 'disponible' && p.price != null ? money(p.price) : 'Lancement à venir');
   const statusLabel = (p) => ({ 'disponible': 'Disponible', 'en-creation': 'En création', 'epuise': 'Épuisé' })[p.status] || 'En création';
 
   // Concept bottle: thick glass, heavy base, architectural cap. Drawn, and labelled as a concept.
-  const flacon = (p, size = 'md') => `
-    <svg class="flacon flacon--${size}" viewBox="0 0 240 320" role="img" aria-label="Visuel conceptuel du flacon ${esc(p.name)}">
+  // Concept bottle, drawn as a real object: thick bevelled glass, a heavy base, the juice set
+  // inside the glass wall, two vertical reflections, a brushed-gold cap on a black collar and a
+  // small engraved plate. Labelled as a concept for assistive technology.
+  const flacon = (p, size = 'md') => {
+    const id = `${p.slug}-${size}`;
+    return `
+    <svg class="flacon flacon--${size}" viewBox="0 0 240 340" role="img" aria-label="Visuel conceptuel du flacon ${esc(p.name)}">
       <defs>
-        <linearGradient id="g-${p.slug}-${size}" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0" stop-color="${p.tone}" stop-opacity=".95"/>
-          <stop offset=".55" stop-color="#0A0A0A" stop-opacity=".9"/>
-          <stop offset="1" stop-color="${p.tone}" stop-opacity=".75"/>
+        <linearGradient id="glass-${id}" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#ffffff" stop-opacity=".10"/>
+          <stop offset=".12" stop-color="#ffffff" stop-opacity=".02"/>
+          <stop offset=".88" stop-color="#000000" stop-opacity=".18"/>
+          <stop offset="1" stop-color="#000000" stop-opacity=".35"/>
         </linearGradient>
-        <linearGradient id="s-${p.slug}-${size}" x1="0" y1="0" x2="1" y2="0">
-          <stop offset="0" stop-color="#F0EBE1" stop-opacity="0"/>
-          <stop offset=".5" stop-color="#F0EBE1" stop-opacity=".16"/>
-          <stop offset="1" stop-color="#F0EBE1" stop-opacity="0"/>
+        <linearGradient id="juice-${id}" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="${p.tone}" stop-opacity=".78"/>
+          <stop offset=".55" stop-color="${p.tone}"/>
+          <stop offset="1" stop-color="#050505"/>
         </linearGradient>
+        <linearGradient id="juiceside-${id}" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#000" stop-opacity=".45"/>
+          <stop offset=".25" stop-color="#000" stop-opacity="0"/>
+          <stop offset=".7" stop-color="#fff" stop-opacity=".05"/>
+          <stop offset="1" stop-color="#000" stop-opacity=".5"/>
+        </linearGradient>
+        <linearGradient id="gold-${id}" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#6E5433"/>
+          <stop offset=".22" stop-color="#C9AE7C"/>
+          <stop offset=".45" stop-color="#F1E3C2"/>
+          <stop offset=".62" stop-color="#B89663"/>
+          <stop offset="1" stop-color="#5E4628"/>
+        </linearGradient>
+        <linearGradient id="base-${id}" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#1B1B19" stop-opacity=".10"/>
+          <stop offset="1" stop-color="#1B1B19" stop-opacity=".28"/>
+        </linearGradient>
+        <pattern id="brush-${id}" width="4" height="2" patternUnits="userSpaceOnUse"><rect width="4" height=".6" fill="#000" opacity=".12"/></pattern>
+        <radialGradient id="shadow-${id}" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#000" stop-opacity=".45"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
       </defs>
-      <rect x="92" y="28" width="56" height="52" fill="#1B1B19" stroke="#92734F" stroke-width="1"/>
-      <rect x="86" y="80" width="68" height="10" fill="#92734F" opacity=".85"/>
-      <rect x="104" y="90" width="32" height="14" fill="#111110" stroke="#92734F" stroke-opacity=".5"/>
-      <rect x="48" y="104" width="144" height="188" fill="url(#g-${p.slug}-${size})" stroke="#C4A875" stroke-opacity=".45"/>
-      <rect x="48" y="272" width="144" height="20" fill="#0A0A0A" opacity=".55"/>
-      <rect x="62" y="114" width="18" height="150" fill="url(#s-${p.slug}-${size})"/>
-      <line x1="84" y1="180" x2="156" y2="180" stroke="#C4A875" stroke-opacity=".6"/>
-      <text x="120" y="172" text-anchor="middle" font-family="Bodoni Moda, serif" font-size="15" letter-spacing="5" fill="#F0EBE1">${esc(site.brand)}</text>
-      <text x="120" y="202" text-anchor="middle" font-family="Manrope, sans-serif" font-size="8" letter-spacing="3" fill="#C4A875">${esc(p.numeral)} · ${esc(p.name.toUpperCase())}</text>
+      <ellipse cx="120" cy="326" rx="92" ry="9" fill="url(#shadow-${id})"/>
+      <!-- cap: brushed gold block on a black collar -->
+      <rect x="84" y="14" width="72" height="64" fill="url(#gold-${id})"/>
+      <rect x="84" y="14" width="72" height="64" fill="url(#brush-${id})"/>
+      <rect x="84" y="14" width="72" height="2" fill="#fff" opacity=".35"/>
+      <rect x="98" y="78" width="44" height="18" fill="#0B0B0A"/>
+      <rect x="98" y="78" width="44" height="2" fill="#C4A875" opacity=".55"/>
+      <!-- glass: bevelled outline, thick walls, heavy base -->
+      <path d="M44 104 L52 96 H188 L196 104 V310 L188 318 H52 L44 310 Z" fill="#1B1B19" fill-opacity=".09" stroke="#C4A875" stroke-opacity=".5" stroke-width="1"/>
+      <path d="M58 110 H182 V262 H58 Z" fill="url(#juice-${id})"/>
+      <path d="M58 110 H182 V262 H58 Z" fill="url(#juiceside-${id})"/>
+      <path d="M44 104 L52 96 H188 L196 104 V310 L188 318 H52 L44 310 Z" fill="url(#glass-${id})"/>
+      <path d="M52 262 H188 V310 L182 316 H58 L52 310 Z" fill="url(#base-${id})"/>
+      <line x1="58" y1="262" x2="182" y2="262" stroke="#ffffff" stroke-opacity=".18"/>
+      <!-- reflections -->
+      <rect x="64" y="114" width="7" height="190" fill="#ffffff" opacity=".22"/>
+      <rect x="75" y="114" width="2" height="190" fill="#ffffff" opacity=".12"/>
+      <rect x="171" y="114" width="3" height="190" fill="#ffffff" opacity=".08"/>
+      <!-- engraved plate -->
+      <rect x="92" y="168" width="56" height="34" fill="#0A0A0A" fill-opacity=".35" stroke="#C4A875" stroke-opacity=".7" stroke-width=".8"/>
+      <text x="120" y="184" text-anchor="middle" font-family="Bodoni Moda, Georgia, serif" font-size="9" letter-spacing="3.2" fill="#EDE3CF">${esc(site.brand)}</text>
+      <text x="120" y="196" text-anchor="middle" font-family="Manrope, Arial, sans-serif" font-size="4.6" letter-spacing="1.6" fill="#C4A875">${esc(p.numeral)} · ${esc(p.name.toUpperCase())}</text>
     </svg>`;
+  };
 
   const card = (p, i = 0) => `
     <li class="card reveal" style="--i:${i}" data-families="${p.families.join(' ')}" data-gender="${p.gender}" data-status="${p.status}" data-intensity="${p.profile.intensite}">
       <a class="card__link" href="/parfums/${p.slug}">
         <div class="card__media" style="--tone:${p.tone}">
           ${flacon(p, 'sm')}
-          <span class="tag">${statusLabel(p)}</span>
         </div>
         <div class="card__body">
           <p class="eyebrow">${esc(p.numeral)} · ${esc(p.families.map((f) => families[f]).join(' · '))}</p>
           <h3 class="card__title">${esc(p.name)}</h3>
           <p class="card__motto">${esc(p.motto)}</p>
-          <p class="card__price">${priceLabel(p)}</p>
+          <p class="card__price">${priceShort(p)}</p>
         </div>
       </a>
       <button class="fav" type="button" data-fav="${p.slug}" aria-pressed="false" aria-label="Ajouter ${esc(p.name)} aux favoris"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg></button>
@@ -107,7 +147,7 @@ export async function build() {
   const iconic = (p, i) => `<li class="iconic" style="--i:${i}">
       <a href="/parfums/${p.slug}" class="iconic__link">
         <span class="iconic__media" style="--tone:${p.tone}">${flacon(p, 'icon')}</span>
-        <span class="iconic__body"><span class="eyebrow">${esc(p.numeral)} · ${esc(p.families.map((f) => families[f]).join(' · '))}</span><span class="iconic__name">${esc(p.name)}</span><span class="small">${priceLabel(p)}</span></span>
+        <span class="iconic__body"><span class="eyebrow">${esc(p.numeral)} · ${esc(p.families.map((f) => families[f]).join(' · '))}</span><span class="iconic__name">${esc(p.name)}</span><span class="small">${priceShort(p)}</span></span>
       </a>
     </li>`;
 
